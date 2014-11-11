@@ -1,0 +1,7 @@
+{
+	"name": "showdownbot",
+	"dependencies": {
+		"chokidar": "^0.10.5",
+		"socket.io": "^1.2.0"
+	}
+}
