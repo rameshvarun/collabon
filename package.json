@@ -1,7 +1,31 @@
 {
-	"name": "showdownbot",
+	"name": "collabon",
+	"version": "0.0.1",
+	"description": "Show off your code in real time.",
+	"author" : "Varun Ramesh <varunramesh@live.com>",
+	"license": "MIT",
+	"keywords" : [
+		"collaborate"
+	],
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/rameshvarun/collabon.git"
+	},
 	"dependencies": {
 		"chokidar": "^0.10.5",
+		"commander": "2.x",
+		"handlebars": "^2.0.0",
 		"socket.io": "^1.2.0"
+	},
+	"preferGlobal": true,
+	"engines": {
+		"node": ">= 0.8.0"
+	},
+	"bin" : {
+		"collabon" : "./bin/collabon"
+	},
+	"main" : "lib/server.js",
+	"directories": {
+		"lib": "./lib"
 	}
 }

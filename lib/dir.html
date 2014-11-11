@@ -1,0 +1,13 @@
+
+
+<html>
+<head>
+	<title>{{ filename }}</title>
+</head>
+
+<body>
+	{{#each files}}
+	File: <a href="{{this.path}}">{{this.name}}</a><br>
+	{{/each}}
+</body>
+</html>

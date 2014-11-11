@@ -1,8 +1,9 @@
 <html>
 <head>
+	<title>{{ filename }}</title>
 	
 	<style type="text/css" media="screen">
-	  #editor { 
+	  #editor {
         position: absolute;
         top: 0;
         right: 0;
@@ -19,6 +20,9 @@
 	<div id="editor"></div>
 
 	<script>
+		// File to request
+		var filename = "{{filename}}";
+
 		// Initialize ACE editor
 	    var editor = ace.edit("editor");
 	    editor.setTheme("ace/theme/monokai");
@@ -28,6 +32,7 @@
 	    // Make socket connection
 	    var socket = io();
 
+	    socket.emit('register', filename);
 	    socket.on('update', function(msg) {
 	    	var previousPosition = editor.getCursorPosition();
 	    	console.log(msg);
